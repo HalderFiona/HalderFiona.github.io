@@ -36,22 +36,22 @@ div h3{
 .dark{
     padding: 16px;
     background:white;
-    color:black;
+    color:#bc6b95;
     margin-top:10px;
     margin-bottom:10px;
 }
 
-/* Header **/
-
-@font-face {
-  font-family: "Streamster";
-  src: url("Streamster.ttf");
+@font-face{
+  font-family: Streamster;
+  src: url("../fonts/Streamster");
 }
+
+/* Header **/
 
 header {
     background:linear-gradient(to bottom left, #660066 0%, #ff5050 100%);
     text-align: center;
-    font-family: "Streamster";
+    font-family: Streamster;
     padding-top:40px;
     min-height:90px;
     border-bottom:#d4b7e5 3px solid;
@@ -193,8 +193,8 @@ footer{
     header nav,
     header nav li,
     #newsletter h1,
-    #newsletter form
-    #boxes .box
+    #newsletter form,
+    #boxes .box,
     #main-col,
     #sidebar{
         float:none;
