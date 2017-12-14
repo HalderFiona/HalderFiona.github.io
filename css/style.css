@@ -42,9 +42,16 @@ div h3{
 }
 
 /* Header **/
+
+@font-face {
+  font-family: "Streamster";
+  src: url("Streamster.ttf");
+}
+
 header {
     background:linear-gradient(to bottom left, #660066 0%, #ff5050 100%);
     text-align: center;
+    font-family: "Streamster";
     padding-top:40px;
     min-height:90px;
     border-bottom:#d4b7e5 3px solid;
@@ -146,25 +153,25 @@ header a:hover{
 }
 
 /* Sidebar */
-aside#sidebar{
+#sidebar{
     float:right;
     width:30%;
     margin-top:10px; 
 }
 
-aside#sidebar .quote input, aside#sidebar .quote textarea{
+#sidebar .quote input, #sidebar .quote textarea{
     width:90%;
     padding:5px;
 }
 
 /* Main-col */
-article#main-col{
+#main-col{
     float:left;
     width:65%;
 }
 
 /* Services */
-ul#services li{
+#services li{
     list-style: none;
     padding:20px;
     border: #cccccc solid 1px;
@@ -188,8 +195,8 @@ footer{
     #newsletter h1,
     #newsletter form
     #boxes .box
-    article#main-col,
-    article#sidebar{
+    #main-col,
+    #sidebar{
         float:none;
         text-align:center;
         width:100%;
