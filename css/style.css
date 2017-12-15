@@ -207,7 +207,16 @@ header a:hover{
     padding:20px;
     border: #cccccc solid 1px;
     margin-bottom: 5px;
-    background:#e6e6e6;
+    background:#f9e5ee;
+}
+
+#services h1, h2, h3{
+    font:#91114b;
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FF1177, 0 0 70px #FF1177, 0 0 80px #FF1177, 0 0 100px #FF1177, 0 0 130px #FF1177;
+}
+
+#services p{
+    color:#932f5c;
 }
 
 footer{
