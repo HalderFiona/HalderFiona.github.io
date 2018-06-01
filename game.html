@@ -1,0 +1,86 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Processing Demo</title>
+<script type="text/javascript" src="./js/processing.js"></script>
+</head>
+
+<body>
+<script type="text/processing">
+
+PImage back;
+PImage face;
+PImage wallImg;
+PFont MyFont;
+int count = 0; int y = 0; int Vy = 0;  
+int gamestate = 0;
+int[] wx = new int[2];
+int[] wy = new int[2];
+void setup(){
+  size(600,338);
+  back = loadImage("./pics/imgimg.png");
+  face = loadImage("./pics/octo1.png");
+  wallImg = loadImage("./pics/wallImg1.png");
+  //image(back, 0, 0);
+}
+void draw (){
+  if (gamestate == 0){
+    image(back, count, 0);
+    image(back, width + count, 0);
+    count--;
+    if (count < -600){
+      count = 0;
+    }
+    image(face, 30, y);
+    //elipse(100, y, 40, 40)
+    
+    if (count%3 == 0){
+      Vy += 1;
+    }
+    y = y + Vy;
+    for(int i = 0 ; i < 2; i ++)  {
+      image(wallImg, wx[i], wy[i] - (wallImg.height/2+100));
+      image(wallImg, wx[i], wy[i] + (wallImg.height/2+100));
+    }
+    
+    if (y < -40 || y > 600){
+      gamestate = 1;
+    }
+  }
+  
+    if (gamestate == 1){
+   background(75,0,130);
+   textSize(50);
+   fill(128,0,128);
+   noStroke();
+   rect(195, 263, 185, 40, 5);
+   fill(216,191,216);
+   text("Restart", 200, 300);
+    if (mouseX > 190  && mouseX < 390 && mouseY > 258 && mouseY < 318){
+      fill(54, 22, 68);
+      noStroke();
+      rect(195, 263, 185, 40, 5);
+      fill(255);
+      text("Restart", 200, 300);
+      if (mousePressed){
+       y = 100;
+       gamestate = 0;
+        }
+      }
+
+    }
+  } 
+
+
+
+void mousePressed(){
+  Vy = -7;
+}
+  
+</script>
+<canvas id="sketch" style="border: 1px solid black;"></canvas>
+
+
+</body>
+</html>
+
